@@ -21,8 +21,8 @@
 
     <script is="e-flowscript" type="script/flow">
         {"title": "My Download", "downloadTotal": 1073741824} >> #downloadoptions 
-        $(~|#backgroundfetch) >> ($console($.result & ": downloaded " & $.downloaded " of " $.downloadTotal ))
         $(:|button) >> "http://212.183.159.230/1GB.zip" >> $(~|#backgroundfetch)
+        $(~|#backgroundfetch) >> ($console($.result & ": downloaded " & $.downloaded " of " $.downloadTotal ))
     </script>
 
     <meta id="backgroundfetch" is="e-backgroundfetch" options="${#downloadoptions}">

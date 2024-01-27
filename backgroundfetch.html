@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline' 'self';
+            script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
+            connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+    <title>`e-backgroundfetch` | Component Showcase</title>
+    <meta name="description" content="Showcase of Element Core Components">
+
+    <!-- <link rel="modulepreload"
+        href="https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose">
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose'
+        async fetchpriority="low"></script> -->
+    <link rel="modulepreload" href="../element/element.js?load&expose">
+    <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
+
+    <script is="e-flowscript" type="script/flow">
+        {"title": "My Download", "downloadTotal": 1073741824} >> #downloadoptions 
+        $(~|#backgroundfetch) >> ($console($.result & ": downloaded " & $.downloaded " of " $.downloadTotal ))
+        $(:|button) >> "http://212.183.159.230/1GB.zip" >> $(~|#backgroundfetch)
+    </script>
+
+    <meta id="backgroundfetch" is="e-backgroundfetch" options="${#downloadoptions}">
+
+</head>
+
+<body style="background: black; color: white;">
+
+    <button>Click to download 1GB file</button>
+
+</body>
+
+</html>

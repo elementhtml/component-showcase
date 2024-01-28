@@ -20,8 +20,8 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        "qrcode.png" >> $(:|#detector img)
-        $(:|#detector!detect) >> ($console("detect", $.value))
+        "qrcode.png" >> $(#detector img)
+        $(#detector) >> ($console("change", $.value))
     </script>
 
 </head>

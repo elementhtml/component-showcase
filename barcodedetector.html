@@ -21,7 +21,7 @@
 
     <script is="e-flowscript" type="script/flow">
         "qrcode.png" >> $(:|#detector img)
-        $(:|#detector!detect) >> ($console("detect", $))
+        $(:|#detector!detect) >> ($console("detect", $.value))
     </script>
 
 </head>
@@ -29,7 +29,7 @@
 <body style="background: black; color: white;">
 
     <e-barcodedetector id="detector" formats="qr_code">
-        <img name="image">
+        <img>
     </e-barcodedetector>
 
 </body>

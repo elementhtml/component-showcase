@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline' 'self';
+            font-src https://fonts.gstatic.com/;
+            script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
+            connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+    <title>`e-font` | Component Showcase | Element</title>
+    <meta name="description" content="Showcase of Element Core Components: `e-font`">
+
+    <!-- <link rel="modulepreload"
+        href="https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose">
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose'
+        async fetchpriority="low"></script> -->
+    <link rel="modulepreload" href="../element/element.js?load&expose">
+    <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
+
+    <script is="e-flowscript" type="script/flow">
+        $(#font) >> `console.log("load", ${})`
+    </script>
+
+    <meta id="font" is="e-font" family="Bitter"
+        source="https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2" auto>
+
+</head>
+
+<body style="background: black; color: white;">
+
+</body>
+
+</html>

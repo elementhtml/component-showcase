@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline' 'self';
+            font-src https://fonts.gstatic.com/;
+            script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' data: blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
+            connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+    <title>`e-cookiestore` | Component Showcase | Element</title>
+    <meta name="description" content="Showcase of Element Core Components: `e-cookiestore`">
+
+    <!-- <link rel="modulepreload"
+        href="https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose">
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose'
+        async fetchpriority="low"></script> -->
+    <link rel="modulepreload" href="../element/element.js?load&expose">
+    <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
+
+    <script is="e-flowscript" type="script/flow">
+        $(:|form) >> ({"set()": $._named}) >> $(#cookiestore)
+        $(#cookiestore) >> ($console($.cookies))
+    </script>
+
+    <meta id="cookiestore" is="e-cookiestore">
+
+</head>
+
+<body style="background: black; color: white;"></body>
+
+<form>
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="value" placeholder="Value">
+    <button>Set Cookie!</button>
+</form>
+
+</html>

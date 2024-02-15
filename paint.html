@@ -21,11 +21,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        _+3000(checkerboard.js)_ >> $(~|#paint)
-        $(~|#paint) >> `console.log("load", ${})`
+        _+3000(checkerboard.js)_ >> $($paint)
+        $($paint) >> `console.log("load", ${})`
     </script>
 
-    <meta id="paint" is="e-paint">
+    <meta is="e-paint">
 
 </head>
 

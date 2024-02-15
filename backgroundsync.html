@@ -20,11 +20,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|button) >> "task3" >> $(~|#backgroundsync)
-        $(~|#backgroundsync) >> ($console("have requested tasks " & $join($.tags, ", ")))
+        $(button) >> "task3" >> $($backgroundsync)
+        $($backgroundsync) >> ($console("have requested tasks " & $join($.tags, ", ")))
     </script>
 
-    <meta id="backgroundsync" is="e-backgroundsync" tags="task1, task2">
+    <meta is="e-backgroundsync" tags="task1, task2">
 
 </head>
 

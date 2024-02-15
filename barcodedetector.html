@@ -20,15 +20,15 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        "qrcode.png" >> $(#detector img)
-        $(#detector) >> ($console("change", $.value))
+        "qrcode.png" >> $($barcodedetector img)
+        $($barcodedetector) >> ($console("change", $.value))
     </script>
 
 </head>
 
 <body style="background: black; color: white;">
 
-    <e-barcodedetector id="detector" formats="qr_code">
+    <e-barcodedetector formats="qr_code">
         <img>
     </e-barcodedetector>
 

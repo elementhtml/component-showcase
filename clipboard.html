@@ -21,11 +21,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|button) >> "hello world!" >> $(~|#clipboard)
-        $(~|#clipboard) >> ($console($._event.detail & ": ", $.data))
+        $(button) >> "hello world!" >> $($clipboard)
+        $($clipboard) >> ($console($._event.detail & ": ", $.data))
     </script>
 
-    <meta id="clipboard" is="e-clipboard">
+    <meta is="e-clipboard">
 
 </head>
 

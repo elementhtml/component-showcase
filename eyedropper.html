@@ -21,11 +21,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|button) >> {"open()": true} >> $(#eyedropper)
-        $(#eyedropper) >> ($console($.color))
+        $(button) >> {"open()": true} >> $($eyedropper)
+        $($eyedropper) >> ($console($.color))
     </script>
 
-    <meta id="eyedropper" is="e-eyedropper">
+    <meta is="e-eyedropper">
 
 </head>
 

@@ -6,11 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline' 'self';
-            font-src https://fonts.gstatic.com/;
             script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
             connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
-    <title>`e-font` | Component Showcase | Element</title>
-    <meta name="description" content="Showcase of Element Core Components: `e-font`">
+    <title>`e-filesystem` | Component Showcase</title>
+    <meta name="description" content="Showcase of Element Core Components: `e-filesystem`">
 
     <!-- <link rel="modulepreload"
         href="https://cdn.jsdelivr.net/gh/elementhtml/element@f001ee6168f145589440954ca893a1bbf7e61acc/element.js?load&expose">
@@ -21,15 +20,24 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $($font) >> `console.log("load", ${})`
+        $(.read-file) >> {"files": true} >> $($filesystem)
+        $(.open-directory) >> {"directory": true} >> $($filesystem)
+        $(.write-to-file) >> {"value": {"hello": "hello world!"}} >> $($filesystem)
+
+        $($filesystem!files) >> ($console($.files))
+        $($filesystem!directory) >> ($console($.directory))
+        $($filesystem) >> ($console($.value))
     </script>
 
-    <meta is="e-font" family="Bitter"
-        source="https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2" auto>
+    <meta is="e-filesystem" suggested-name="hello.json">
 
 </head>
 
 <body style="background: black; color: white;">
+
+    <button class="write-to-file">Click to Write "Hello World" to a File</button>
+    <button class="open-directory">Click to Open a Directory</button>
+    <button class="read-file">Click to Read from a File</button>
 
 </body>
 

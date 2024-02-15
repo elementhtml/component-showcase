@@ -21,12 +21,12 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|button) >> {"connect()": true} >> $(#bluetooth)
-        $(#bluetooth!connect) >> `console.log("connect", ${})`
-        $(#bluetooth) >> `console.log("receive", ${})`
+        $(button) >> {"connect()": true} >> $($bluetooth)
+        $($bluetooth!connect) >> `console.log("connect", ${})`
+        $($bluetooth) >> `console.log("receive", ${})`
     </script>
 
-    <meta id="bluetooth" is="e-bluetooth" service="battery_service" characteristic="battery_level">
+    <meta is="e-bluetooth" service="battery_service" characteristic="battery_level">
 
 </head>
 

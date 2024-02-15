@@ -20,10 +20,10 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(~|#battery) >> ($console($.level))
+        $($batterystatus) >> ($console($.level))
     </script>
 
-    <meta id="battery" is="e-batterystatus" observe="level">
+    <meta is="e-batterystatus" observe="level">
 
 </head>
 

@@ -21,11 +21,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|form) >> ({"set()": $._named}) >> $(#cookiestore)
-        $(#cookiestore) >> ($console($.cookies))
+        $(form) >> ({"set()": $._named}) >> $($cookiestore)
+        $($cookiestore) >> ($console($.cookies))
     </script>
 
-    <meta id="cookiestore" is="e-cookiestore">
+    <meta is="e-cookiestore">
 
 </head>
 

@@ -21,8 +21,8 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        #content >> $(~|#contentindex)
-        $(~|#contentindex) >> ($console($.entries))
+        #content >> $($contentindex)
+        $($contentindex) >> ($console($.entries))
     </script>
 
     <meta id="contentindex" is="e-contentindex">

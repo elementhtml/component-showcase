@@ -21,11 +21,11 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        $(:|button) >> {"select()": true} >> $(~|#contacts)
-        $(~|#contacts) >> ($console($))
+        $(button) >> {"select()": true} >> $($contacts)
+        $($contacts) >> ($console($))
     </script>
 
-    <meta id="contacts" is="e-contacts" properties="name,email">
+    <meta is="e-contacts" properties="name,email">
 
 </head>
 

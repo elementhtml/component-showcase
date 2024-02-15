@@ -20,12 +20,12 @@
     <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
 
     <script is="e-flowscript" type="script/flow">
-        {"options": {"title": "My Download", "downloadTotal": 1073741824}} >> $(~|#backgroundfetch) 
-        $(:|button) >> "http://212.183.159.230/1GB.zip" >> $(~|#backgroundfetch)
-        $(~|#backgroundfetch) >> ($console($.result & ": downloaded " & $.downloaded " of " $.downloadTotal ))
+        {"options": {"title": "My Download", "downloadTotal": 1073741824}} >> $($backgroundfetch) 
+        $(button) >> "http://212.183.159.230/1GB.zip" >> $($backgroundfetch)
+        $($backgroundfetch) >> ($console($.result & ": downloaded " & $.downloaded " of " $.downloadTotal ))
     </script>
 
-    <meta id="backgroundfetch" is="e-backgroundfetch">
+    <meta is="e-backgroundfetch">
 
 </head>
 

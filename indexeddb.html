@@ -32,8 +32,10 @@
 
     <e-indexeddb-database name="db">
         <e-indexeddb-objectstore name="customers" key-path="ssn">
-            <meta is="e-indexeddb-index" name="name">
-            <meta is="e-indexeddb-index" name="email" unique>
+            <e-indexeddb-index name="name">
+                <meta is="e-indexeddb-cursor" lower="" upper="" only="" lower-open upper-open direction="" key>
+            </e-indexeddb-index>
+            <e-indexeddb-index name="email" unique></e-indexeddb-index>
         </e-indexeddb-objectstore>
     </e-indexeddb-database>
 
